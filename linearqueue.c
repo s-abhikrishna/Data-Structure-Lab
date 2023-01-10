@@ -2,22 +2,19 @@
 
             #define MAX 5
 
-            //Declaration of Queue
             typedef struct queue
             {
 	            int front	;
 	            int rear	;
 	            int ele[MAX]	;
             }Queue;
-
-            //Intialze Queue
+         
             void init(Queue *q)
             {
 	            q->rear  = -1;
 	            q->front =  0;
             }
-
-            //To check Queue is full or not
+            
             int isFull(Queue *q)
             {
 	            int full=0;
@@ -27,8 +24,7 @@
 
 	            return full;
             }
-
-            //To check Queue is empty or not
+     
             int isEmpty(Queue *q)
             {
 	            int empty=0;
@@ -38,8 +34,7 @@
 
 	            return empty;
             }
-
-            //Insert item into queue
+         
             void insertQueue(Queue *q,int item)
             {
 	            if( isFull(q) )
@@ -51,8 +46,7 @@
 	            q->ele[++(q->rear)] = item;
 	            printf("\nInserted item : %d",item);
             }
-
-            //Delete item from queue
+         
             int deleteQueue(Queue *q, int * item)
             {
 	            if( isEmpty(q) )
