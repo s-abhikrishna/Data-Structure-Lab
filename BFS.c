@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 int a[20][20],q[20],visited[20],n,i,j,f=0,r=-1;
 void bfs(int v) {
 	for (i=1;i<=n;i++)
@@ -12,7 +11,6 @@ void bfs(int v) {
 }
 void main() {
 	int v;
-	clrscr();
 	printf("\n Enter the number of vertices:");
 	scanf("%d",&n);
 	for (i=1;i<=n;i++) {
@@ -31,5 +29,4 @@ void main() {
 	  if(visited[i])
 	   printf("%d\t",i); else
 	   printf("\n Bfs is not possible");
-	getch();
 }
